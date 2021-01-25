@@ -1,0 +1,6 @@
+module Pods_JKL_JKLTests {
+  umbrella header "Pods-JKL-JKLTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

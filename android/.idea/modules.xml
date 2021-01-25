@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JKL.iml" filepath="$PROJECT_DIR$/.idea/modules/JKL.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/JKL.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/JKL.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-2108890111/JKL.react-native-community_masked-view.iml" filepath="$PROJECT_DIR$/.idea/modules/-2108890111/JKL.react-native-community_masked-view.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/75558902/JKL.react-native-gesture-handler.iml" filepath="$PROJECT_DIR$/.idea/modules/75558902/JKL.react-native-gesture-handler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/78020304/JKL.react-native-image-picker.iml" filepath="$PROJECT_DIR$/.idea/modules/78020304/JKL.react-native-image-picker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1889471590/JKL.react-native-reanimated.iml" filepath="$PROJECT_DIR$/.idea/modules/1889471590/JKL.react-native-reanimated.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/249029343/JKL.react-native-safe-area-context.iml" filepath="$PROJECT_DIR$/.idea/modules/249029343/JKL.react-native-safe-area-context.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-435651145/JKL.react-native-screens.iml" filepath="$PROJECT_DIR$/.idea/modules/-435651145/JKL.react-native-screens.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1703287712/JKL.react-native-vector-icons.iml" filepath="$PROJECT_DIR$/.idea/modules/1703287712/JKL.react-native-vector-icons.iml" />
+    </modules>
+  </component>
+</project>
