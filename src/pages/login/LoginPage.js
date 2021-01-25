@@ -6,11 +6,23 @@ import {TextInput} from 'react-native-paper';
 import ButtonComponent from '../../components/ButtonComponent';
 import styles from './LoginStyles';
 import TextLinkComponent from '../../components/TextLinkComponent';
+import UserService from '../../net/UserService'
 
 const LoginPage = () => {
   const navigation = useNavigation();
+  const service = new UserService();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+
+  const onsPress = async ()=>{
+    try{
+      const result =  await service.login({username: username, password: password})
+      //guardar sesions 
+
+    }catch(err){
+      console.log(err)
+    }
+  }
 
   return (
     <SafeAreaView>

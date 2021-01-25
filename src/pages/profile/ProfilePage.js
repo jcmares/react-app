@@ -15,6 +15,7 @@ import {TextInput} from 'react-native-paper';
 import ButtonComponent from '../../components/ButtonComponent';
 import {launchCamera, launchImageLibrary} from 'react-native-image-picker';
 import styles from './ProfileStyles';
+import { getPhoto } from '../../utills/CameraUtills'
 
 const ProfilePage = () => {
   const navigation = useNavigation();
@@ -23,27 +24,12 @@ const ProfilePage = () => {
   const [phone, setPhone] = useState('');
   const [imageProfile, setImageProfile] = useState(null);
 
-  getPhoto = () => {
-    let options = {
-      storageOptions: {
-        skipBackup: true,
-        path: 'images',
-      },
-      saveToPhotos: true,
-      quality: 0.5,
-    };
-
-    launchCamera(options, (response) => {
-      if (response.didCancel) {
-        console.log('user cancelled image picker');
-      } else if (response.error) {
-        console.log('ImagePicker Error: ' + error);
-      } else {
-        console.log('response: ' + JSON.stringify(response.uri));
-
-        setImageProfile(response.uri);
-      }
-    });
+  const launchGetPhoto = () => {
+      getPhoto(function(uri){
+        setImageProfile(uri);
+      }, function(err){
+        console.log(err)
+      })
   };
 
   getGallery = () => {

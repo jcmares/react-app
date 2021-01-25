@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import LoginPage from '../pages/login/LoginPage';
 import WelcomePage from '../pages/welcome/WelcomePage';
@@ -9,20 +9,19 @@ import {View} from 'react-native';
 const Stack = createStackNavigator();
 const sharedPreference = SharedPreference.getInstance();
 
-const getSession = () => {
-  const [isSignUp, setSignUp] = useState(false);
-  //const [isProcess, setProcess] = useState(false);
-
-  sharedPreference.getSignUp((signUp) => {
-    console.log('SIGNUP : ' + signUp);
-    setSignUp(signUp);
-  });
-  //setProcess(true);
-  return {isSignUp};
-};
-
 const WelcomeNavigator = () => {
-  const {isSignUp} = getSession();
+  const [isSignUp, setSignUp] = useState(false);
+
+  const loadSesion = ()=>{
+    sharedPreference.getSignUp((signUp) => {
+      console.log('SIGNUP : ' + signUp);
+      setSignUp(signUp);
+    });
+  }
+  
+  useEffect(() => {
+    loadSesion()
+  }, [])
 
   return (
     <View style={{flex: 1}}>

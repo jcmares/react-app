@@ -1,9 +1,12 @@
 import axios from 'axios';
 
-const AxiosService = axios.create({
+export const EndPoints  = {
   baseURL: '',
+  login: EndPoints.baseURL + '/login'
+}
+
+export const AxiosService = axios.create({
   timeout: 1000,
   headers: {'X-Custom-Header': 'foobar'},
 });
 
-export default AxiosService;

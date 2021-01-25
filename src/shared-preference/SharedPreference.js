@@ -32,6 +32,11 @@ class SharedPreference {
     });
   }
 
+
+  async getUserToken2(onSuccess) {
+    return await DefaultPreference.get('token')
+  }
+
   setSignUp(value){
     DefaultPreference.set('signUp', value.toString()).then(function () {
         console.log('LOGIN [' + value + '] WAS STORED');
